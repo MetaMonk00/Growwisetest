@@ -140,6 +140,17 @@ const AUTO_POPUP_MINUTES = 5;
     });
   });
 
+
+  /* ── Decorative brand marks in heroes & CTA bands ── */
+  var MARK =
+    '<svg class="hex-deco %CLS%" viewBox="-1 -1 102 102" aria-hidden="true">' +
+      '<path fill="#fff" d="M0 45 L0 27 L50 0 L100 27 L100 46 L91 51 L100 56 L100 68 L36 68 L45 57.5 L78 57.5 L78 46 L88 46 L88 34 L50 12 L12 34 L12 38.5 Z"/>' +
+      '<path fill="#fff" d="M100 55 L100 73 L56 96.8 L56 84.6 L88 66 L88 61.5 Z M52 86.8 L52 98.9 L50 100 L0 73 L0 54 L9 49 L0 44 L0 32 L64 32 L55 42.5 L22 42.5 L22 54 L12 54 L12 66 L50 88 Z"/>' +
+    '</svg>';
+  document.querySelectorAll('.hero, .page-hero, .cta-band').forEach(function (h) {
+    h.insertAdjacentHTML('afterbegin', MARK.replace('%CLS%', 'd1') + MARK.replace('%CLS%', 'd2'));
+  });
+
   /* ── Scroll reveals ── */
   var obs = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {

@@ -442,3 +442,21 @@ footer{border-top:1px solid var(--line);padding:56px 44px 34px;background:rgba(0
 .dash-side .ic{width:15px;height:15px;color:var(--faint);}
 .dash-side a.on .ic{color:var(--accent-soft);}
 .ic-lg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 6px;display:block;}
+
+
+/* ── BLOG ART & DECOR ── */
+.post-art{
+  position:relative;border-radius:20px;overflow:hidden;margin-bottom:20px;
+  background:radial-gradient(130% 130% at 18% -10%,rgba(255,122,0,.30),rgba(255,122,0,.05) 55%),#241b12;
+  border:1px solid var(--tint2);aspect-ratio:16/8.5;
+  display:flex;align-items:center;justify-content:center;
+}
+.post-art .art{width:62%;height:auto;}
+.article-art{max-width:720px;margin:26px auto 0;padding:0 32px;}
+.article-art .post-art{aspect-ratio:16/6;margin-bottom:0;}
+.hex-deco{position:absolute!important;width:min(300px,36vw);opacity:.05;pointer-events:none;z-index:0;}
+.hex-deco.d1{top:-60px;right:-70px;transform:rotate(12deg);}
+.hex-deco.d2{bottom:-70px;left:-80px;transform:rotate(-11deg);}
+.page-hero{position:relative;overflow:hidden;}
+.page-hero>:not(.hex-deco){position:relative;z-index:1;}
+.cta-band .hex-deco{opacity:.09;}
