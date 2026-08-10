@@ -42,9 +42,8 @@ const AUTO_POPUP_MINUTES = 5;
 
   var FALLBACK_HTML =
     '<div class="bk-fallback">' +
-      '<p>Our booking calendar is being connected. In the meantime, call us directly or send us a message and we\'ll get right back to you.</p>' +
-      '<a href="tel:+18501234567" class="btn btn-primary">Call (850) 123-4567</a>' +
-      '<a href="contact.html" class="btn btn-ghost">Contact Us</a>' +
+      '<p>Our booking calendar is being connected. Send us a message and we\'ll get right back to you.</p>' +
+      '<a href="contact.html" class="btn btn-primary">Contact Us</a>' +
     '</div>';
 
   function showCalendar() {
@@ -131,14 +130,13 @@ const AUTO_POPUP_MINUTES = 5;
     }
   }
 
-  /* ── FAQ accordion ── */
+  /* ── FAQ: all answers open by default; click to collapse/expand ── */
+  document.querySelectorAll('.faq-item').forEach(function (item) {
+    item.classList.add('open');
+  });
   document.querySelectorAll('.faq-q').forEach(function (q) {
     q.addEventListener('click', function () {
-      var item = q.parentElement;
-      document.querySelectorAll('.faq-item.open').forEach(function (o) {
-        if (o !== item) o.classList.remove('open');
-      });
-      item.classList.toggle('open');
+      q.parentElement.classList.toggle('open');
     });
   });
 
