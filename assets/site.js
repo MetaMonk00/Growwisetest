@@ -15,7 +15,7 @@
       per visit and never interrupts a popup the visitor
       already opened.
    ═══════════════════════════════════════════════════════════ */
-const BOOKING_EMBED_URL = "";
+const BOOKING_EMBED_URL = "https://main.growwisebusiness.com/widget/booking/mng8qLDNdMMHAIQVmSSL";
 const AUTO_POPUP_MINUTES = 5;
 
 (function () {
@@ -59,6 +59,13 @@ const AUTO_POPUP_MINUTES = 5;
         body.innerHTML = '';
         body.appendChild(f);
         body.dataset.loaded = '1';
+        /* GHL embed helper — auto-sizes the booking iframe */
+        if (!document.getElementById('ghl-form-embed')) {
+          var s = document.createElement('script');
+          s.id = 'ghl-form-embed';
+          s.src = 'https://link.msgsndr.com/js/form_embed.js';
+          document.body.appendChild(s);
+        }
       }
     } else if (!body.dataset.loaded) {
       body.innerHTML = FALLBACK_HTML;
