@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | GrowWise — Book A Call Or Send A Message</title>
-<meta name="description" content="Get in touch with GrowWise. Book a free call or send a message — we'll get right back to you.">
+<title>Contact | GrowWise &mdash; Ask Us Anything</title>
+<meta name="description" content="Have a question about GrowWise? Send it over and a real person will answer. Or book a free call and we will walk you through the whole system.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="GrowWise">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.growwisebusiness.com/contact.html">
-<meta property="og:title" content="Contact GrowWise">
-<meta property="og:description" content="Book a free call or send us a message — we'll get right back to you.">
+<meta property="og:title" content="Contact | GrowWise &mdash; Ask Us Anything">
+<meta property="og:description" content="Have a question about GrowWise? Send it over and a real person will answer. Or book a free call and we will walk you through the whole system.">
 <meta property="og:site_name" content="GrowWise">
 <link rel="canonical" href="https://www.growwisebusiness.com/contact.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,57 +55,62 @@
 </nav>
 
 <header class="page-hero">
-  <span class="eyebrow reveal">Contact</span>
-  <h1 class="h1 reveal">Let's Talk About<br><span class="accent">Your Growth.</span></h1>
-  <p class="lead reveal">The fastest way to reach us is to book a free call — or send a message below and we'll get right back to you.</p>
-  <div class="hero-btns reveal">
-    <a href="#book" class="btn btn-primary btn-lg js-book">Book Your Free Call</a>
-  </div>
+  <span class="eyebrow reveal">Questions</span>
+  <h1 class="h1 reveal">Ask Us Anything.<br><span class="accent">A Real Person Answers.</span></h1>
+  <p class="lead reveal">Not ready for a call? No problem. Send your question below and we will get back to you fast. No sales pitch and no runaround.</p>
 </header>
 
 <section class="section tight" style="border-top:1px solid var(--line);">
   <div class="container" style="max-width:760px;">
     <div class="form-card reveal">
-      <h2 class="h3" style="font-size:1.4rem;margin-bottom:6px;">Send Us A Message</h2>
-      <p style="color:var(--body);font-size:.9rem;margin-bottom:26px;">Tell us a little about your business and what you need. No commitment, no spam — just a conversation about your growth.</p>
-      <form class="form-grid" id="contactForm">
-        <div class="field"><label for="cf-name">Full Name</label><input id="cf-name" type="text" placeholder="Your name" required></div>
-        <div class="field"><label for="cf-email">Business Email</label><input id="cf-email" type="email" placeholder="you@business.com" required></div>
-        <div class="field"><label for="cf-phone">Phone Number</label><input id="cf-phone" type="tel" placeholder="(555) 555-5555"></div>
-        <div class="field"><label for="cf-biz">Business Name</label><input id="cf-biz" type="text" placeholder="Your business"></div>
-        <div class="field full"><label for="cf-need">What Do You Need Most?</label>
-          <select id="cf-need">
-            <option value="" disabled selected>Choose one…</option>
-            <option>A professional website</option>
-            <option>Re-marketing campaigns</option>
-            <option>Database reactivation (DBR)</option>
-            <option>5-star review funnel</option>
+      <h2 class="h3" style="font-size:1.4rem;margin-bottom:6px;">Send Us Your Question</h2>
+      <p style="color:var(--body);font-size:.9rem;margin-bottom:26px;">Tell us what you want to know. We answer every message, usually the same day.</p>
+
+      <form class="form-grid" id="contactForm" novalidate>
+        <div class="field"><label for="cf-name">Your Name</label><input id="cf-name" name="name" type="text" placeholder="Your name" required></div>
+        <div class="field"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" placeholder="you@business.com" required></div>
+        <div class="field"><label for="cf-phone">Phone (optional)</label><input id="cf-phone" name="phone" type="tel" placeholder="(555) 555-5555"></div>
+        <div class="field"><label for="cf-biz">Business Name (optional)</label><input id="cf-biz" name="business" type="text" placeholder="Your business"></div>
+        <div class="field full"><label for="cf-topic">What Is Your Question About?</label>
+          <select id="cf-topic" name="topic">
+            <option value="" disabled selected>Choose one&hellip;</option>
+            <option>Pricing and what is included</option>
+            <option>The website you build</option>
+            <option>Reviews and the review funnel</option>
             <option>Missed call text back</option>
-            <option>Reviews to social posts / AI review responses</option>
-            <option>Mobile app &amp; CRM</option>
-            <option>The full GrowWise system</option>
-            <option>Not sure yet — let's talk</option>
+            <option>Campaigns and database reactivation</option>
+            <option>The app and CRM</option>
+            <option>Getting started and how long it takes</option>
+            <option>Something else</option>
           </select>
         </div>
-        <div class="field full"><label for="cf-msg">Message</label><textarea id="cf-msg" placeholder="Tell us about your business…"></textarea></div>
+        <div class="field full"><label for="cf-msg">Your Question</label><textarea id="cf-msg" name="message" placeholder="Ask away&hellip;" required></textarea></div>
         <div class="field full">
-          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Send Message</button>
+          <button type="submit" class="btn btn-primary btn-lg" id="cf-submit" style="width:100%;">Send My Question</button>
+          <p id="cf-status" role="status" aria-live="polite" style="margin-top:14px;font-size:.88rem;line-height:1.6;text-align:center;"></p>
         </div>
       </form>
+
+      <div id="cf-done" style="display:none;text-align:center;padding:16px 0 6px;">
+        <svg viewBox="0 0 24 24" aria-hidden="true" style="width:46px;height:46px;margin:0 auto 16px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>
+        <h3 class="h3" style="margin-bottom:8px;">Got It. Thanks!</h3>
+        <p style="color:var(--body);font-size:.92rem;line-height:1.7;max-width:420px;margin:0 auto 22px;">Your question is in. A real person will get back to you fast, usually the same day. Want an answer right now instead?</p>
+        <button class="btn btn-primary js-book">Book A Free Call</button>
+      </div>
     </div>
 
     <div class="stats-grid" style="margin-top:22px;grid-template-columns:repeat(3,1fr);">
-      <div class="stat-card reveal" style="text-align:center;"><svg class="ic-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><div class="stat-label"><strong>Live chat</strong><br>Tap the chat bubble in the corner — we text you right back</div></div>
-      <div class="stat-card tinted reveal" style="text-align:center;"><svg class="ic-lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="4"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><div class="stat-label"><strong>Book a free call</strong><br><a href="#book" class="js-book" style="color:var(--accent);font-weight:600;">Pick a time →</a></div></div>
-      <div class="stat-card reveal" style="text-align:center;"><svg class="ic-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div class="stat-label"><strong>Based in</strong><br>Pensacola, FL — serving businesses across the US</div></div>
+      <div class="stat-card reveal" style="text-align:center;"><svg class="ic-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><div class="stat-label"><strong>Live chat</strong><br>Tap the chat bubble in the corner. We text you right back.</div></div>
+      <div class="stat-card tinted reveal" style="text-align:center;"><svg class="ic-lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div class="stat-label"><strong>Free call</strong><br><a href="#book" class="js-book" style="color:var(--accent);font-weight:600;">Pick a time &rarr;</a></div></div>
+      <div class="stat-card reveal" style="text-align:center;"><svg class="ic-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div class="stat-label"><strong>Where we are</strong><br>Pensacola, FL. We help service businesses across the US.</div></div>
     </div>
   </div>
 </section>
 
 <section class="section tight">
   <div class="cta-band reveal">
-    <h2 class="h2">Prefer To Just Talk?</h2>
-    <p>Skip the form. Grab a free call and let's talk for real.</p>
+    <h2 class="h2">Rather Just Talk?</h2>
+    <p>Skip the form. Grab a free call and we will answer everything live.</p>
     <a href="#book" class="btn btn-primary btn-lg js-book">Book Your Free Call</a>
   </div>
 </section>
@@ -164,16 +169,92 @@
 </div>
 <script src="assets/site.js"></script>
 <script>
-/* Contact form — front-end only for now.
-   Swap this for your form/embed link when ready (e.g. a HighLevel
-   form embed can replace the whole .form-card contents). */
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  var btn = this.querySelector('button[type="submit"]');
-  btn.textContent = "Message Sent! We'll Be In Touch.";
-  btn.style.background = '#1ea051';
-  btn.disabled = true;
-});
+/* ═══════════════════════════════════════════════════════════
+   CONTACT FORM  ->  GoHighLevel inbound webhook
+   Paste a different webhook URL here to point the form
+   somewhere else. Nothing else needs to change.
+   ═══════════════════════════════════════════════════════════ */
+const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/Rof8rBv450hHDcYgDM5U/webhook-trigger/16046385-21bf-4366-aaad-550bb25d49c1";
+
+(function () {
+  var form   = document.getElementById('contactForm');
+  var btn    = document.getElementById('cf-submit');
+  var status = document.getElementById('cf-status');
+  var done   = document.getElementById('cf-done');
+  if (!form) return;
+
+  function say(msg, ok) {
+    status.textContent = msg;
+    status.style.color = ok ? 'var(--accent-soft)' : '#ff8a80';
+  }
+
+  function payload() {
+    var name  = document.getElementById('cf-name').value.trim();
+    var parts = name.split(/\s+/);
+    return {
+      name: name,
+      first_name: parts.shift() || name,
+      last_name: parts.join(' '),
+      email: document.getElementById('cf-email').value.trim(),
+      phone: document.getElementById('cf-phone').value.trim(),
+      business_name: document.getElementById('cf-biz').value.trim(),
+      topic: document.getElementById('cf-topic').value,
+      message: document.getElementById('cf-msg').value.trim(),
+      source: 'Website contact form',
+      page: window.location.href,
+      submitted_at: new Date().toISOString()
+    };
+  }
+
+  function send(data) {
+    // Try a normal JSON post first so we can read the response.
+    return fetch(GHL_WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return true;
+    }).catch(function () {
+      // Fall back to a simple request that skips the CORS preflight.
+      return fetch(GHL_WEBHOOK_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+        body: JSON.stringify(data)
+      }).then(function () { return true; });
+    });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = payload();
+
+    if (!data.name)    { say('Please add your name.', false); return; }
+    if (!/^\S+@\S+\.\S+$/.test(data.email)) { say('Please add a valid email.', false); return; }
+    if (!data.message) { say('Please type your question.', false); return; }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    say('', true);
+
+    send(data).then(function () {
+      form.style.display = 'none';
+      done.style.display = 'block';
+      done.querySelectorAll('.js-book').forEach(function (b) {
+        b.addEventListener('click', function (ev) {
+          ev.preventDefault();
+          var nav = document.querySelector('.nav-cta.js-book');
+          if (nav) nav.click();
+        });
+      });
+    }).catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Send My Question';
+      say('That did not go through. Please try again, or use the chat bubble in the corner.', false);
+    });
+  });
+})();
 </script>
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a7a4ba83bbada1743f9f552"></script>
 </body>
