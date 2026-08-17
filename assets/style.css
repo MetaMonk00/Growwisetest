@@ -80,6 +80,14 @@ button{font-family:inherit;cursor:pointer;}
 .drop .drop-head{font-size:.65rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--faint);padding:8px 16px 4px;}
 .nav-burger{display:none;background:none;border:1px solid var(--line);border-radius:12px;width:40px;height:40px;align-items:center;justify-content:center;flex-direction:column;gap:4px;}
 .nav-burger span{display:block;width:16px;height:2px;background:var(--ink);border-radius:2px;}
+/* nav mid-width: tighten so the full menu still fits on one row */
+@media(min-width:961px) and (max-width:1240px){
+  .nav{padding:16px 22px;gap:10px;}
+  .nav-links a{font-size:.79rem;padding:8px 9px;}
+  .nav-cta{font-size:.76rem;padding:10px 15px;}
+  .brand{font-size:1.06rem;}
+  .brand-mark{width:26px;height:26px;}
+}
 @media(max-width:960px){
   .nav{padding:14px 18px;flex-wrap:wrap;gap:10px;}
   .brand{order:1;margin-right:auto;}
